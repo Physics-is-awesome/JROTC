@@ -121,9 +121,9 @@ def main():
 
     import pandas as pd
     df = pd.read_excel(file_path)
-    print("Hi" df.columns)
+    print(df.columns)
     
-    column_name = "B"  # Column name or index (e.g., "B", 1)
+    column_name = 1  # Column name or index (e.g., "B", 1)
     output_pdf = "output.pdf"  # Output PDF file name
     template_pdf = "blank.pdf"  # Path to PDF template (set to None if not used)
     coordinates = [(100, 700), (100, 650), (100, 600)]  # (x, y) coordinates for text overlay

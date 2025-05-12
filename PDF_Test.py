@@ -125,6 +125,7 @@ def main():
         print("No numbers to process. Exiting.")
         return
     print(f"Extracted numbers: {numbers}")
+    print(f"Checking if file exists: {os.path.exists(file_path)}")
     
     # Create or overlay PDF
     if template_pdf and os.path.exists(template_pdf):
@@ -141,4 +142,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print(f"Checking if file exists: {os.path.exists(file_path)}")
+

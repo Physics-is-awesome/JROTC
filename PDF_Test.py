@@ -111,7 +111,7 @@ def fill_pdf_form(template_path, output_path, numbers, field_mappings):
 
 def main():
     # Configuration - EDIT THESE VALUES FOR YOUR PROJECT
-    file_path = r'C:\Users\ajcas\Downloads\Testing.xlsx'  # Path to your CSV or Excel file (e.g., "data.xlsx")
+    file_path = r'C:\Users\ajcas\Downloads'  # Path to your CSV or Excel file (e.g., "data.xlsx")
     column_name = "B"  # Column name or index (e.g., "B", 1)
     output_pdf = "output.pdf"  # Output PDF file name
     template_pdf = "blank.pdf"  # Path to PDF template (set to None if not used)

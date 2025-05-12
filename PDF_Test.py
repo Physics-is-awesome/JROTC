@@ -121,7 +121,7 @@ def main():
 
     import pandas as pd
     df = pd.read_excel(file_path)
-    print(df.columns)
+    print("Hi" df.columns)
     
     column_name = "B"  # Column name or index (e.g., "B", 1)
     output_pdf = "output.pdf"  # Output PDF file name

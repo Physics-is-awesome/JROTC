@@ -3,6 +3,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from PyPDF2 import PdfReader, PdfWriter
 import os
+import subprocess
 
 
 def get_numbers_from_file(file_path, column_name):
@@ -149,6 +150,15 @@ def main():
     else:
         # No template, create new PDF
         create_pdf_with_numbers(numbers, output_pdf)
+
+# Automatically open the PDF
+    try:
+        subprocess.run(["xdg-open", output_pdf], check=True)
+        print(f"Opened {output_pdf} with default PDF viewer")
+    except subprocess.CalledProcessError as e:
+        print(f"Error opening PDF: {e}")
+    except FileNotFoundError:
+        print("Error: xdg-open not found. Please install xdg-utils or use another method to open the PDF.")
 
 if __name__ == "__main__":
     main()

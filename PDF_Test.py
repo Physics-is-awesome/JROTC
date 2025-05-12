@@ -115,7 +115,7 @@ def main():
     # Configuration - EDIT THESE VALUES FOR YOUR PROJECT
     
     print(f"Current working directory: {os.getcwd()}")
-    file_path = r"C:\Users\ajcas\Downloads\Testing.xlsx"
+    file_path = "C:\\Users\\ajcas\\Downloads\\Testing.xlsx"
     print(f"File path being checked: {file_path}")
     print(f"Checking if file exists: {os.path.exists(file_path)}")
     

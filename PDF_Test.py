@@ -151,7 +151,7 @@ def main():
         # No template, create new PDF
         create_pdf_with_numbers(numbers, output_pdf)
 
-try:
+    try:
         subprocess.run(["evince", output_pdf], check=True)
         print(f"Opened {output_pdf} with Evince")
     except (subprocess.CalledProcessError, FileNotFoundError):

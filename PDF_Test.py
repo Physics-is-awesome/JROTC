@@ -14,6 +14,7 @@ def get_numbers_from_file(file_path, column_name):
     Returns:
         list: List of floats extracted from the column.
     """
+    print(f"Checking if file exists: {os.path.exists(file_path)}")
     try:
         if file_path.endswith('.csv'):
             df = pd.read_csv(file_path)
@@ -125,7 +126,7 @@ def main():
         print("No numbers to process. Exiting.")
         return
     print(f"Extracted numbers: {numbers}")
-    print(f"Checking if file exists: {os.path.exists(file_path)}")
+    
     
     # Create or overlay PDF
     if template_pdf and os.path.exists(template_pdf):

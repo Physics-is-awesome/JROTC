@@ -120,7 +120,7 @@ def main():
     print(f"Checking if file exists: {os.path.exists(file_path)}")
 
     import pandas as pd
-    df = pd.read_excel("your_file.xlsx")
+    df = pd.read_excel(file_path)
     print(df.columns)
     
     column_name = "B"  # Column name or index (e.g., "B", 1)

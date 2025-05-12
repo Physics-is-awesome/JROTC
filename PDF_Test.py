@@ -151,14 +151,18 @@ def main():
         # No template, create new PDF
         create_pdf_with_numbers(numbers, output_pdf)
 
-# Automatically open the PDF
-    try:
-        subprocess.run(["xdg-open", output_pdf], check=True)
-        print(f"Opened {output_pdf} with default PDF viewer")
-    except subprocess.CalledProcessError as e:
-        print(f"Error opening PDF: {e}")
-    except FileNotFoundError:
-        print("Error: xdg-open not found. Please install xdg-utils or use another method to open the PDF.")
+try:
+        subprocess.run(["evince", output_pdf], check=True)
+        print(f"Opened {output_pdf} with Evince")
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        print("Evince failed or not installed. Trying xdg-open...")
+        try:
+            subprocess.run(["xdg-open", output_pdf], check=True)
+            print(f"Opened {output_pdf} with default PDF viewer")
+        except subprocess.CalledProcessError as e:
+            print(f"Error opening PDF: {e}")
+        except FileNotFoundError:
+            print("Error: xdg-open not found. Please install xdg-utils or evince.")
 
 if __name__ == "__main__":
     main()

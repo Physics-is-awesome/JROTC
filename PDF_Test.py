@@ -118,6 +118,10 @@ def main():
     file_path = "/home/ajc/JROTC/Testing.xlsx"
     print(f"File path being checked: {file_path}")
     print(f"Checking if file exists: {os.path.exists(file_path)}")
+
+    import pandas as pd
+    df = pd.read_excel("your_file.xlsx")
+    print(df.columns)
     
     column_name = "B"  # Column name or index (e.g., "B", 1)
     output_pdf = "output.pdf"  # Output PDF file name

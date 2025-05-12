@@ -4,7 +4,7 @@ from reportlab.lib.pagesizes import letter
 from PyPDF2 import PdfReader, PdfWriter
 import os
 
-print(f"Checking if file exists: {os.path.exists(file_path)}")
+
 def get_numbers_from_file(file_path, column_name):
     """
     Read numbers from a CSV or Excel file.
@@ -141,3 +141,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print(f"Checking if file exists: {os.path.exists(file_path)}")

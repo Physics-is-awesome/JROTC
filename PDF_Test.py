@@ -163,7 +163,8 @@ def main():
             print(f"Error opening PDF: {e}")
         except FileNotFoundError:
             print("Error: xdg-open not found. Please install xdg-utils or evince.")
-
-if __name__ == "__main__":
+script = input("Input script")
+if script == "1":
     main()
-
+else:
+    return

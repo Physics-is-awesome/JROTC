@@ -166,5 +166,4 @@ def main():
 script = input("Input script")
 if script == "1":
     main()
-else:
-    return
+
